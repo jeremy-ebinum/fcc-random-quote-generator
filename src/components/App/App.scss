@@ -92,7 +92,7 @@
   align-items: center;
   background-color: $white;
   padding: 2rem;
-  max-width: 75%;
+  max-width: 768px;
 
   animation: slideDown 0.4s ease-in forwards;
 
@@ -111,6 +111,7 @@
 }
 
 .c-quote__text {
+  font-weight: $font-weight-bold;
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -131,7 +132,7 @@
   }
 
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 }
