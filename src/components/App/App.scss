@@ -1,4 +1,5 @@
 @import "../../styles/partials/variables";
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
 
 %btn-shared {
   position: relative;
@@ -59,6 +60,30 @@
   overflow: hidden;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+}
+
 .o-quote-box {
   position: relative;
   display: flex;
@@ -68,6 +93,12 @@
   background-color: $white;
   padding: 2rem;
   max-width: 75%;
+
+  animation: slideDown 0.4s ease-in forwards;
+
+  &.slideOut {
+    animation: slideOut 0.4s ease-in forwards;
+  }
 
   @media (min-width: 768px) {
     padding: 4rem;
@@ -84,6 +115,7 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   line-height: 1.1;
+  font-family: "Comic Neue", cursive;
   color: $gray-900;
 
   &::before {

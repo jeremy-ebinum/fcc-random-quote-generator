@@ -1,4 +1,6 @@
-const quotes = [
+const { v4: uuid } = require("uuid");
+
+const data = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
     author: "Kevin Kruse",
@@ -465,5 +467,7 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quotes = data.map((item) => ({ ...item, id: uuid() }));
 
 export default quotes;

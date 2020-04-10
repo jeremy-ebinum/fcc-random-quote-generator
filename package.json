@@ -45,9 +45,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "core-js": "^3.6.5",
+    "lodash.sample": "^4.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "regenerator-runtime": "^0.13.5"
+    "regenerator-runtime": "^0.13.5",
+    "uuid": "^7.0.3"
   },
   "browserslist": {
     "production": [

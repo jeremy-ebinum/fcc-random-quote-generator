@@ -4,9 +4,11 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 5.12.1
   '@fortawesome/react-fontawesome': 0.1.8_e21276715d23f741d7c609402ad253e4
   core-js: 3.6.5
+  lodash.sample: 4.2.1
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
   regenerator-runtime: 0.13.5
+  uuid: 7.0.3
 devDependencies:
   '@babel/core': 7.9.0
   '@babel/preset-env': 7.9.0_@babel+core@7.9.0
@@ -4593,6 +4595,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==
+  /lodash.sample/4.2.1:
+    dev: false
+    resolution:
+      integrity: sha1-XkKRsMdT+hq+sKq4+ynfG2bwf20=
   /lodash/4.17.15:
     dev: true
     resolution:
@@ -7274,6 +7280,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+  /uuid/7.0.3:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
   /v8-compile-cache/2.0.3:
     dev: true
     resolution:
@@ -7665,6 +7676,7 @@ specifiers:
   eslint-plugin-react: ^7.19.0
   file-loader: ^6.0.0
   html-webpack-plugin: ^4.2.0
+  lodash.sample: ^4.2.1
   mini-css-extract-plugin: ^0.9.0
   node-sass: ^4.13.1
   prettier: ^2.0.4
@@ -7673,6 +7685,7 @@ specifiers:
   regenerator-runtime: ^0.13.5
   sass-loader: ^8.0.2
   url-loader: ^4.1.0
+  uuid: ^7.0.3
   webpack: ^4.42.1
   webpack-cli: ^3.3.11
   webpack-dev-server: ^3.10.3
