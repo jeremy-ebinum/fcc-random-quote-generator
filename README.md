@@ -2,6 +2,10 @@
 
 A simple quote generator web app written with Reactjs
 
+<img src="../assets/screenshots/fcc-random-quote-generator.gif?raw=true" width="640" alt="website gif" />
+
+[View Live Website](https://jeremy-ebinum.github.io/fcc-random-quote-generator/)
+
 ## usage
 
 In the project directory, you can run:
