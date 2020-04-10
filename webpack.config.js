@@ -37,7 +37,7 @@ const config = (env, argv) => {
             {
               loader: "css-loader",
               options: {
-                modules: { localIdentName: "[local]___[hash:base64:5]" },
+                modules: false,
                 sourceMap: !!isDevMode,
                 importLoaders: 1,
               },

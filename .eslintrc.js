@@ -8,6 +8,7 @@ module.exports = {
     node: true,
   },
   rules: {
+    "func-names": "as-needed",
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { extensions: [".js", ".jsx"] }],
     "max-len": [

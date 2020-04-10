@@ -1,0 +1,149 @@
+@import "../../styles/partials/variables";
+
+%btn-shared {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  background-color: $gray-900;
+  color: $white;
+  font-family: $font-family-monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.4s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::after {
+    content: "";
+    background: $gray-700;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -2rem !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  &:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0.8rem 2rem;
+  }
+}
+
+.o-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray-900;
+  overflow: hidden;
+}
+
+.o-quote-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  padding: 2rem;
+  max-width: 75%;
+
+  @media (min-width: 768px) {
+    padding: 4rem;
+  }
+}
+
+.c-quote {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-quote__text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: $gray-900;
+
+  &::before {
+    content: "“";
+    color: inherit;
+    font-size: 2em;
+    margin-right: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.c-quote__author {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  color: $gray-900;
+
+  &::before {
+    content: "—";
+    color: inherit;
+    margin-right: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    margin-bottom: 1.3rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.c-cta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.c-cta__tweet {
+  @extend %btn-shared;
+
+  padding: 0.5rem;
+  background-color: $twitter-black;
+  border-radius: 4px;
+
+  @media (min-width: 768px) {
+    padding: 0.8rem;
+  }
+}
+
+.c-cta__new {
+  @extend %btn-shared;
+}
