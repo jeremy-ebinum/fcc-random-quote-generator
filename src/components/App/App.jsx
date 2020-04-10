@@ -56,14 +56,14 @@ const App = () => {
           >
             <FontAwesomeIcon icon={faTwitter} size="lg" />
           </a>
-          <a
+          <button
+            type="button"
             id="new-quote"
-            href="#"
             className="c-cta__new"
             onClick={setRandomQuote}
           >
             Next Quote
-          </a>
+          </button>
         </div>
       </div>
     </div>
