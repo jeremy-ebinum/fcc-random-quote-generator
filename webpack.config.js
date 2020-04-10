@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const RemovePlugin = require("remove-files-webpack-plugin");
 
 const config = (env, argv) => {
   const { mode } = argv;
@@ -63,7 +63,12 @@ const config = (env, argv) => {
       ],
     },
     plugins: [
-      new CleanWebpackPlugin(),
+      new RemovePlugin({
+        before: {
+          include: ["./build/"],
+          exclude: ["./build/.git"],
+        },
+      }),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, "public", "index.html"),
         favicon: path.join(__dirname, "public", "favicon.ico"),
