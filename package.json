@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://jeremy-ebinum.github.io/fcc-random-quote-generator",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production",
+    "deploy:surge": "npm run build && surge -p ./build/",
+    "deploy:gh": "npm run build && gh-pages -d build",
     "lint": "eslint ./src/**/*.{js,jsx}",
     "lint:fix": "eslint ./src/**/*.{js,jsx} --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,6 +32,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
@@ -49,6 +53,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "regenerator-runtime": "^0.13.5",
+    "surge": "^0.21.3",
     "uuid": "^7.0.3"
   },
   "browserslist": {
